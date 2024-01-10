@@ -22,7 +22,7 @@ counties = pd.read_csv("dashboard_data/counties_new.csv")
 
 #map
 load_dotenv()
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.environ.get("API_KEY", "default_val")
 px.set_mapbox_access_token(API_KEY)
 
 fig = px.scatter_mapbox(counties, lat="lat", lon="long", 
