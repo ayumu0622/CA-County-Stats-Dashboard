@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 import os
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 race_df = pd.read_csv("dashboard_data/race_df.csv")
 
